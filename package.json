@@ -2,7 +2,7 @@
   "name": "multicopytoolforai",
   "displayName": "MultiCopyTool",
   "description": "Select multiple files and copy their contents to clipboard — formatted for AI chats (Claude, ChatGPT, Copilot, etc.)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "fbulatovic95",
   "engines": {
     "vscode": "^1.85.0"
