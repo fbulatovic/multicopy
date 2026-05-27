@@ -1,0 +1,62 @@
+{
+  "name": "multicopy",
+  "displayName": "MultiCopy",
+  "description": "Select multiple files and copy their contents to clipboard — formatted for AI chats (Claude, ChatGPT, Copilot, etc.)",
+  "version": "1.0.0",
+  "publisher": "fbulatovic95",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "copy",
+    "clipboard",
+    "ai",
+    "chatgpt",
+    "claude",
+    "files",
+    "multi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fbulatovic/multicopy"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "multiCopy.selectAndCopy",
+        "title": "MultiCopy: Select Files and Copy for AI Chat"
+      },
+      {
+        "command": "multiCopy.copyOpenTabs",
+        "title": "MultiCopy: Copy Open Tabs for AI Chat"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "multiCopy.selectAndCopy",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^2.22.0"
+  },
+  "bugs": {
+    "url": "https://github.com/fbulatovic/multicopy/issues"
+  },
+  "homepage": "https://github.com/fbulatovic/multicopy#readme"
+}
