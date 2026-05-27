@@ -1,6 +1,6 @@
 {
-  "name": "multicopy",
-  "displayName": "MultiCopy",
+  "name": "multicopytoolforai",
+  "displayName": "MultiCopyTool",
   "description": "Select multiple files and copy their contents to clipboard — formatted for AI chats (Claude, ChatGPT, Copilot, etc.)",
   "version": "1.0.0",
   "publisher": "fbulatovic95",
@@ -58,5 +58,6 @@
   "bugs": {
     "url": "https://github.com/fbulatovic/multicopy/issues"
   },
-  "homepage": "https://github.com/fbulatovic/multicopy#readme"
+  "homepage": "https://github.com/fbulatovic/multicopy#readme",
+  "icon": "icon.png"
 }
