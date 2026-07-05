@@ -2,10 +2,10 @@
   "name": "multicopytoolforai",
   "displayName": "MultiCopyTool",
   "description": "Select multiple files and copy their contents to clipboard — formatted for AI chats (Claude, ChatGPT, Copilot, etc.)",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "publisher": "fbulatovic95",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.90.0"
   },
   "categories": [
     "Other"
@@ -23,10 +23,57 @@
     "type": "git",
     "url": "https://github.com/fbulatovic/multicopy"
   },
+  "bugs": {
+    "url": "https://github.com/fbulatovic/multicopy/issues"
+  },
+  "homepage": "https://github.com/fbulatovic/multicopy#readme",
+  "icon": "icon.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "multiCopyContainer",
+          "title": "MultiCopy",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "multiCopyContainer": [
+        {
+          "id": "multiCopyExplorer",
+          "name": "Select Files",
+          "type": "tree"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "multiCopy.copySelected",
+          "when": "view == multiCopyExplorer",
+          "group": "navigation"
+        },
+        {
+          "command": "multiCopy.refresh",
+          "when": "view == multiCopyExplorer",
+          "group": "navigation"
+        }
+      ]
+    },
     "commands": [
+      {
+        "command": "multiCopy.copySelected",
+        "title": "Copy Selected to Clipboard",
+        "icon": "$(clippy)"
+      },
+      {
+        "command": "multiCopy.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
       {
         "command": "multiCopy.selectAndCopy",
         "title": "MultiCopy: Select Files and Copy for AI Chat"
@@ -50,14 +97,9 @@
     "package": "vsce package"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
+    "@types/vscode": "^1.90.0",
     "@types/node": "^20.0.0",
     "typescript": "^5.3.0",
     "@vscode/vsce": "^2.22.0"
-  },
-  "bugs": {
-    "url": "https://github.com/fbulatovic/multicopy/issues"
-  },
-  "homepage": "https://github.com/fbulatovic/multicopy#readme",
-  "icon": "icon.png"
+  }
 }
